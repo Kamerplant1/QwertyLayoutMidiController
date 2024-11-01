@@ -1,2 +1,2 @@
 # QwertyLayoutMidiController
-##spacebar = Sustain on/off##
+spacebar = Sustain on/off
