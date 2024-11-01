@@ -1,0 +1,111 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.key {
+    display: inline-block;
+    width: 50px;
+    height: 200px;
+    margin: 2px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.key:hover {
+    background-color: #3498db;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+.key:active {
+    background-color: #1f6399;
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+#sustainStatus {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    transition: color 0.2s;
+}
+.toggle {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: relative;
+    cursor: pointer;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.4s;
+}
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+}
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+.transpose-button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.transpose-button:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+}
+.transpose-button:active {
+    background-color: #c0392b;
+    transform: scale(0.95);
+}
+.current-values {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+.key-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

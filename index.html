@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDI Note Keys</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>src="script.js"</script>
+</head>
+<body>
+    <h1>MIDI Note Keys</h1>
+    <div class="key-container" id="keys"></div>
+    <div class="current-values">Current Velocity: <span id="velocityLabel">127</span></div>
+    <div class="current-values">Current Transpose: <span id="transposeLabel">0</span></div>
+    <div id="sustainStatus">Sustain is OFF</div>
+
+    <label class="toggle">
+        <span>Sustain:</span>
+        <input type="checkbox" id="sustainToggle">
+        <span class="slider"></span>
+    </label>
+
+    <div>
+        <button class="transpose-button" onclick="changeTranspose(-1)">Transpose Down (-1)</button>
+        <button class="transpose-button" onclick="changeTranspose(1)">Transpose Up (+1)</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
